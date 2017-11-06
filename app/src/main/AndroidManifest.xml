@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pedro.charlesbradleytribute">
-    <!--PERMISOS NECESARIOS PARA ACCEDER A INTERNET
+
+    <!--
+    PERMISOS NECESARIOS PARA ACCEDER A INTERNET
     http://www.desarrollolibre.net/blog/tema/273/android/como-incrustar-un-video-de-youtube-en-android#.Wf3zlWjWzmY
+
+    https://stackoverflow.com/questions/26458919/integrating-youtube-to-fragment
     -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    BLUETOOTH
 
     <application
         android:allowBackup="true"
@@ -22,7 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListaCanciones"></activity>
+        <activity android:name=".ListaCanciones" />
+        <activity android:name=".youtube" />
+        <activity android:name=".navegador"></activity>
     </application>
 
 </manifest>
