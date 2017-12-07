@@ -121,6 +121,7 @@ public class Menu extends AppCompatActivity  /*implements AdapterView.OnItemClic
         setContentView(R.layout.activity_menu);
 
         listaDiscos=(ListView)findViewById(R.id.lvListaDiscos);
+
         discos=new ArrayList<Disco>();
 
 
@@ -131,19 +132,19 @@ public class Menu extends AppCompatActivity  /*implements AdapterView.OnItemClic
         discos.add(changes);
 
         //
-        miAdaptador=new discoAdaptador(this, discos);
+        miAdaptador=new discoAdaptador(getApplicationContext(),discos);
         listaDiscos.setAdapter(miAdaptador);
 
         listaDiscos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                //RECOJO UN COCHE DE LA POSICION DE LA LIST VIEW
-                Disco coche = (Disco) adapterView.getItemAtPosition(i);
+                //
+                Disco disco = (Disco) adapterView.getItemAtPosition(i);
 
                 //MANDO EL OBJETO SELECCIONADO EN EL LISTVIEW A MI NUEVO ACTIVITY DETALLE
                 Intent e = new Intent(getApplicationContext(), ListaCanciones.class);
-                e.putExtra("objeto", (Serializable) coche);
+                e.putExtra("objeto", (Serializable) disco);
                 startActivity(e);
 
             }
@@ -154,17 +155,5 @@ public class Menu extends AppCompatActivity  /*implements AdapterView.OnItemClic
 
 
     }
-/*
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        //tvNombre.setText(animales.get(position).getNombre());
 
-        //ImageView foto=(ImageView) findViewById(R.id.ivFoto);
-
-       // foto.setImageResource(discos.get(i).getPortada());
-       Disco obj =discos.get(i);
-        Intent paso = new Intent(getApplicationContext(), ListaCanciones.class);
-        paso.putExtra("objeto", (Serializable)obj);
-        startActivity(paso);
-    }*/
 }

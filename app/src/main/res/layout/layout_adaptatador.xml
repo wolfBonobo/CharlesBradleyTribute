@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    >
 
 
     <LinearLayout
@@ -16,7 +17,8 @@
             android:id="@+id/imgv"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@color/colorPrimary" />
+            app:srcCompat="@color/colorPrimary"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +32,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:text="Titulo"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
@@ -41,8 +42,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:inputType="textMultiLine"
                 android:text="Descripcion"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />

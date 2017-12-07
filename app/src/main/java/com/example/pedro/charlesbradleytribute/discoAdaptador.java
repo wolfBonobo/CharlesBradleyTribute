@@ -19,9 +19,9 @@ import java.util.List;
 class discoAdaptador extends BaseAdapter {
 
     Context contexto; //contexto de la aplicacion
-    List<Disco> listaDiscos;
+    ArrayList<Disco> listaDiscos;
 
-    public discoAdaptador(Context contexto, List<Disco> discos) {
+    public discoAdaptador(Context contexto, ArrayList<Disco> discos) {
 
         this.contexto = contexto;
         this.listaDiscos = discos;
@@ -57,5 +57,6 @@ class discoAdaptador extends BaseAdapter {
         anno.setText(listaDiscos.get(i).getAño().toString());
 
         return vista;
+
     }
 }
